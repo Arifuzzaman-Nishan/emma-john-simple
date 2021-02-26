@@ -1,0 +1,9 @@
+.product{
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+.product-name{
+    color: blue;
+}

@@ -12,7 +12,7 @@
 .nav-list{
     display: flex;
 }
-ul li{
+nav ul li{
     list-style: none;
 }
 nav a{
