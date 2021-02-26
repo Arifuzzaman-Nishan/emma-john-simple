@@ -19,4 +19,8 @@ nav a{
     text-decoration: none;
     color: white;
     margin-right: 20px;
+    padding: 7px;
+}
+a:hover{
+    background-color: rgb(182, 181, 181);
 }

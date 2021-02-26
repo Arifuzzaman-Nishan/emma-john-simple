@@ -7,15 +7,15 @@ const Header = () => {
         <div className="header">
             <img src={logo} alt="" />
             <nav>
-                <ul className = "nav-list">
+                <ul className="nav-list">
                     <li>
                         <a href="/shop">Shop</a>
                     </li>
                     <li>
-                        <a href="/inventory">Manage Inventory here</a>
+                        <a href="/review">Order Review</a>
                     </li>
                     <li>
-                        <a href="/review">Order Review</a>
+                        <a href="/inventory">Manage Inventory here</a>
                     </li>
                 </ul>
             </nav>
