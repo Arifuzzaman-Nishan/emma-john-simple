@@ -1,6 +1,7 @@
-import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
+// import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { nativeTouchData } from 'react-dom/test-utils';
+// import { nativeTouchData } from 'react-dom/test-utils';
+import { Link } from 'react-router-dom';
 import './Cart.css'
 
 
@@ -32,13 +33,13 @@ const Cart = (props) => {
                 <h3>Items Ordered: {props.cart.length}</h3>
             </div>
             <div className="cart-lower-part">
-                <p ><small className="space">Items: ${formatNumber(total)}</small></p>
+                <p><small className="space">Items: ${formatNumber(total)}</small></p>
                 <p><small>Shopping & Handling: ${shippingCost} </small></p>
                 <p><small>Total before tax: {formatNumber(total + shippingCost)} </small></p>
                 <p><small>Estimated Tax: {formatNumber(tax)}</small></p>
                 <h3 className = "color">Order Total: ${formatNumber(total + shippingCost + tax)}</h3>
                 <div style = {{textAlign : "center"}}>
-                <button className = "button">Review your order</button>
+                <Link to = "/review"><button className = "button">Review your order</button></Link>
                 </div>
             </div>
         </div>
