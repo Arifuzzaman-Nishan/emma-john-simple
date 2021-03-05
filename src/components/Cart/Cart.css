@@ -9,3 +9,9 @@
 .color{
     color: #b12704;
 }
+.link{
+    text-decoration: none;
+}
+.link:hover{
+    background-color: white;
+}

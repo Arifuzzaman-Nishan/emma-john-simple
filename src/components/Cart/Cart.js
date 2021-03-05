@@ -1,7 +1,7 @@
 // import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 // import { nativeTouchData } from 'react-dom/test-utils';
-import { Link } from 'react-router-dom';
+
 import './Cart.css'
 
 
@@ -10,7 +10,7 @@ const Cart = (props) => {
 
     let total = 0;
     props.cart.forEach(pd => {
-        total += pd.price;
+        total += pd.price*parseInt(pd.quantity);
     });
 
     let shippingCost = 0;
@@ -39,7 +39,9 @@ const Cart = (props) => {
                 <p><small>Estimated Tax: {formatNumber(tax)}</small></p>
                 <h3 className = "color">Order Total: ${formatNumber(total + shippingCost + tax)}</h3>
                 <div style = {{textAlign : "center"}}>
-                <Link to = "/review"><button className = "button">Review your order</button></Link>
+                {
+                    props.children
+                }
                 </div>
             </div>
         </div>

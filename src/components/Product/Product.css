@@ -1,15 +1,17 @@
-.product{
+.product {
     display: flex;
     margin: 5px;
     padding: 10px;
     border-bottom: 1px solid lightgray;
 }
-.product-name{
+
+.product-name {
     color: #0000ff;
     font-weight: 400;
 }
-.button{
-    background-color: #f0c14b;
+
+.button {
+    background-color: #f0c14b; 
     border-color: #a88734 #9c7e31 #846a29;
     width: 200px;
     height: 26px;
@@ -17,8 +19,13 @@
     cursor: pointer;
     border-style: solid;
     border-width: 1px;
-    /* vertical-align: middle; */
+    vertical-align: middle;
 }
-.product-details{
+
+.button:hover {
+    box-shadow: none !important;
+}
+
+.product-details {
     margin-left: 10px;
 }
