@@ -10,7 +10,7 @@ const Cart = (props) => {
 
     let total = 0;
     props.cart.forEach(pd => {
-        total += pd.price*parseInt(pd.quantity);
+        total += pd.price*parseInt(pd.quantity) || 1;
     });
 
     let shippingCost = 0;

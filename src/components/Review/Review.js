@@ -26,14 +26,27 @@ const Review = () => {
 
     useEffect(() => {
         const saveCart = getDatabaseCart();   //from database
-        const productkeys = Object.keys(saveCart);
+        // console.log("saveCart: ",saveCart);
+        const productKeys = Object.keys(saveCart);
+        // console.log(productkeys);
 
-        const cartProduct = productkeys.map(key => {
-            const product = fakeData.find(pd => pd.key === key);
-            product.quantity = saveCart[key];
-            return product;
-        });
-        setCart(cartProduct);
+        fetch('https://secure-springs-28866.herokuapp.com/productsByKeys',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(productKeys)
+        })
+        .then(res => res.json())
+        .then(data => setCart(data))
+
+        // const cartProduct = productkeys.map(key => {
+        //     const product = fakeData.find(pd => pd.key === key);
+        //     product.quantity = saveCart[key];
+        //     return product;
+        // });
+        // setCart(cartProduct);
+
     }, []);
 
     let thankYou;
